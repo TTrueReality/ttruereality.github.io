@@ -132,7 +132,7 @@ header a:hover {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 30px;
+        gap: 20px;
     
         list-style-type: none;
         background-color: rgb(66, 0, 0);
@@ -177,6 +177,7 @@ main{
     
         background-color: #000000;
         transition: all 0.3s ease 0s;
+        
     }
 }
 

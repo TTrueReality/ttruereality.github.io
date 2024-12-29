@@ -26,7 +26,6 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 100px;
 
     list-style-type: none;
     background-color: rgb(66, 0, 0);
@@ -63,7 +62,6 @@ header a:hover {
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 30px;
     
         list-style-type: none;
         background-color: rgb(66, 0, 0);
@@ -74,7 +72,6 @@ header a:hover {
     header a {
         text-decoration: none;
         color: white;
-        font-size: medium;
         transition: all 0.3s ease 0s;
     }
 }
@@ -152,11 +149,23 @@ main li {
 }
 
 .list-info li{
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     text-align: left;
     list-style-type: none;
     gap: 5px;
+}
+
+@media (max-width: 900px){
+    .list-info li{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        list-style-type: none;
+        gap: 5px;
+    }
 }
 
 .list-info li p {
@@ -171,6 +180,17 @@ main li {
     border-style: solid;
     border-width: 1px;
     color: white;
+}
+
+@media (max-width: 900px) {
+    .list-info li input {
+        font-size: large;
+        width: 100%;
+        background-color: #000000;
+        border-style: solid;
+        border-width: 1px;
+        color: white;
+    }
 }
 
 #bt-submit{
