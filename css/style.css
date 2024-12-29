@@ -185,6 +185,22 @@ main{
     text-align: center;
 }
 
+.lain-welcome{
+    z-index: 10;
+    position: relative;
+    left: 400px;
+    top: 280px;
+    width: 130px;
+    margin: 0px;
+}
+
+@media (max-width: 900px) {
+    .lain-welcome{
+        width: 0px;
+        opacity: 0;
+    }
+}
+
 .tx-title{
     font-size: 100px;
     animation: Shake 1s 0s infinite both;
