@@ -271,6 +271,18 @@ main{
     transition: all 0.3s ease 0s;
 }
 
+.newYear{
+    display: inline;
+    text-align: center;
+    animation: Shake 1s 0s infinite both;
+}
+
+.newYear p{
+    display: inline;
+    font-size: xx-large;
+    margin-right: 15px;
+}
+
 @media (max-width: 900px) {
     main{
         margin-top: 100px;
