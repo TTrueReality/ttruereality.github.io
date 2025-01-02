@@ -100,8 +100,8 @@
         </main>
 
         <div class="panels">
-            <div class="newYear">
-                <p>HAPPY 2025</p>
+            <div class="announcements">
+                <p>NEW IMAGES FOR GALLERY :)</p>
             </div>
         </div>
 
@@ -119,211 +119,339 @@
 
         <div class="panels" id="imgGallery">
             <div class="alert-gallery">Gallery - Images</div>
-            <div class="g-images">
-                <li>
-                    <button class="bt-openimg" id="img_0"
-                        onclick="window.open('https://x.com/suihuayu/status/1872787042658287724/photo/1', '_blank')">
-                        <img class="img-up"
-                            src="https://pbs.twimg.com/media/Gf1546VawAMwoen?format=jpg&name=large"
-                            alt="Self-Harm">
-                        <p>By Twitter: </p><span
-                            id="origin-user">@suihuayu</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openimg" id="img_1"
-                        onclick="window.open('https://x.com/Kagana_Helsuki/status/1872338957389938689/photo/1', '_blank')">
-                        <img class="img-up"
-                            src="https://pbs.twimg.com/media/GfvhtCua0AAax9N?format=jpg&name=4096x4096"
-                            alt="Self-Harm">
-                        <p>By Twitter: </p><span
-                            id="origin-user">@Kagana_Helsuki</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openimg" id="img_2"
-                        onclick="window.open('https://x.com/moonissmm/status/1872419496390177218/photo/1', '_blank')">
-                        <img class="img-up"
-                            src="https://pbs.twimg.com/media/GfwrmyIXsAAv0Lc?format=jpg&name=large"
-                            alt="Self-Harm">
-                        <p>By Twitter: </p><span
-                            id="origin-user">@moonissmm</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openimg" id="img_3"
-                        onclick="window.open('https://x.com/masstroller404/status/1872250771141726260', '_blank')">
-                        <img class="img-up"
-                            src="https://pbs.twimg.com/media/GfuSJ3xWoAAsype?format=jpg&name=900x900"
-                            alt="Self-Harm">
-                        <p>By Twitter: </p><span
-                            id="origin-user">@masstroller404</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openimg" id="img_4"
-                        onclick="window.open('https://x.com/mememe_8800/status/1871934395084685703', '_blank')">
-                        <img class="img-up"
-                            src="https://pbs.twimg.com/media/GfpyTPCbwAA9msO?format=jpg&name=large"
-                            alt="Self-Harm">
-                        <p>By Twitter: </p><span
-                            id="origin-user">@mememe_8800</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openimg" id="img_5"
-                        onclick="window.open('https://x.com/cuttyherwrist/status/1872489294662885550', '_blank')">
-                        <img class="img-up"
-                            src="https://pbs.twimg.com/media/GfxqulLWQAAcvQX?format=jpg&name=large"
-                            alt="Self-Harm">
-                        <p>By Twitter: </p><span
-                            id="origin-user">@cuttyherwrist</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openimg" id="img_6"
-                        onclick="window.open('https://x.com/GORE_D0LL/status/1872771338458546291', '_blank')">
-                        <img class="img-up"
-                            src="https://pbs.twimg.com/media/Gf1rm5BWUAAZHhr?format=jpg&name=240x240"
-                            alt="Self-Harm">
-                        <p>By Twitter: </p><span
-                            id="origin-user">@GORE_D0LL</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openimg" id="img_7"
-                        onclick="window.open('https://x.com/suihuayu/status/1872498694995759320', '_blank')">
-                        <img class="img-up"
-                            src="https://pbs.twimg.com/media/Gfxzo5XaAAAOeHg?format=jpg&name=large"
-                            alt="Self-Harm">
-                        <p>By Twitter: </p><span
-                            id="origin-user">@suihuayu</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openimg" id="img_8"
-                        onclick="window.open('https://x.com/lattemochio/status/1867260450226024842', '_blank')">
-                        <img class="img-up"
-                            src="https://pbs.twimg.com/media/GenXewMbsAImxkJ?format=jpg&name=large"
-                            alt="Self-Harm">
-                        <p>By Twitter: </p><span
-                            id="origin-user">@lattemochio</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-            </div>
+            <div class="g-images" id="img-data"></div>
         </div>
+
+        <script>
+            const img_data = [
+                {
+                    originalLink: "https://x.com/suihuayu/status/1872787042658287724/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/Gf1546VawAMwoen?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "suihuayu",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/Kagana_Helsuki/status/1872338957389938689/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/GfvhtCua0AAax9N?format=jpg&name=4096x4096",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "Kagana_Helsuki",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/moonissmm/status/1872419496390177218/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/GfwrmyIXsAAv0Lc?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "moonissmm",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/masstroller404/status/1872250771141726260",
+                    imgLink: "https://pbs.twimg.com/media/GfuSJ3xWoAAsype?format=jpg&name=900x900",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "masstroller404",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/mememe_8800/status/1871934395084685703",
+                    imgLink: "https://pbs.twimg.com/media/GfpyTPCbwAA9msO?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "mememe_8800",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/cuttyherwrist/status/1872489294662885550",
+                    imgLink: "https://pbs.twimg.com/media/GfxqulLWQAAcvQX?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "cuttyherwrist",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/GORE_D0LL/status/1872771338458546291",
+                    imgLink: "https://pbs.twimg.com/media/Gf1rm5BWUAAZHhr?format=jpg&name=240x240",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "GORE_D0LL",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/suihuayu/status/1872498694995759320",
+                    imgLink: "https://pbs.twimg.com/media/Gfxzo5XaAAAOeHg?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "suihuayu",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/lattemochio/status/1867260450226024842",
+                    imgLink: "https://pbs.twimg.com/media/GenXewMbsAImxkJ?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "lattemochio",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/astricidio/status/1874185601714655578/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/GgJx2YaXIAAUiSC?format=jpg&name=medium",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "astricidio",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/yumesito69/status/1873868272803995757/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/GgFRQ3UXAAA4KFC?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "yumesito69",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/520_q0/status/1874350840372486616/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/GgMIJ7XbcAAmTTu?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "520_q0",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/520_q0/status/1874208373518065948/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/GgKGlNzbAAA5lJw?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "520_q0",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/linsxta24104/status/1873821244711460955/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/GgEmfWOWEAAUeQm?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "linsxta24104",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/schizovoid/status/1873765451597287795/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/GgDzv1fXIAE0Tqa?format=jpg&name=medium",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "schizovoid",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/suicidaldollyy/status/1874121808057913503/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/GgI32ixWgAIUEtp?format=jpg&name=medium",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "####",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/fallecidaz/status/1873943759391777250/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/GgGV6wvW0AAQgiZ?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "fallecidaz",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/cr0ss_cryb0y/status/1873529698648735922/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/GgAdU7rWgAAS-wo?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "cr0ss_cryb0y",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/linsxta24104/status/1873513006145077649/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/GgAOJc0WMAAnsOc?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "linsxta24104",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/pixelkcal/status/1873151234515087681/photo/2",
+                    imgLink: "https://pbs.twimg.com/media/Gf7FHpXWUAAuoMy?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "pixelkcal",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/pupsizgf/status/1873167341435154543/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/Gf7TxL7XwAA2lnq?format=jpg&name=medium",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "pupsizgf",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/shootme41/status/1873069635140239374/photo/1",
+                    imgLink: "https://pbs.twimg.com/media/Gf565b_b0AAtulg?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "shootme41",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+                {
+                    originalLink: "https://x.com/moonissmm/status/1873077090276524121",
+                    imgLink: "https://pbs.twimg.com/media/Gf6BruTXkAAzBm2?format=jpg&name=large",
+                    originWeb: "Twitter",
+                    category: "Self-Harm",
+                    userName: "moonissmm",
+                    uploadBy: "C4tLiar (web Owner)"
+                },
+            ];
+
+            function img_createTemplate(item, index) {
+                return `
+                    <li>
+                        <button class="bt-openimg" id="img_${index}"
+                            onclick="window.open('${item.originalLink}', '_blank')">
+                            <img class="img-up"
+                                src="${item.imgLink}"
+                                alt="${item.category}">
+                            <p>By ${item.originWeb}: </p><span
+                                id="origin-user">@${item.userName}</span> 
+                            <h6>Uploaded by: ${item.uploadBy}</h6>
+                        </button>
+                    </li>
+                `;
+            }
+
+            const img_container = document.getElementById("img-data");
+            img_data.forEach((item, index) => {
+                img_container.innerHTML += img_createTemplate(item, index + 1);
+            });
+        </script>
 
         <div class="panels" id="VidGallery">
             <div class="alert-gallery">Gallery - Videos</div>
-            <div class="g-videos">
-                <li>
-                    <button class="bt-openvid" id="vid_0"
-                        onclick="window.open('https://bestgore.fun/w/cnEjuWiWVNiWkifS8ejkhf', '_blank')">
-                        <img class="vid-up"
-                            src="https://bestgore.fun/lazy-static/thumbnails/5ea640ef-1423-4eda-aee4-17f2d8e4ef6c.jpg"
-                            alt="Gore Video">
-                        <h1 class="vid-title">rapist has his chest opened and
-                            his heart eaten by one of his executioners</h1>
-                        <p>By Bestgore.fun: </p><span
-                            id="origin-user">@lacrimojenta</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openvid" id="vid_1"
-                        onclick="window.open('https://bestgore.fun/w/ji9zi39jZG2za5tC8fcQA5', '_blank')">
-                        <img class="vid-up"
-                            src="https://bestgore.fun/lazy-static/thumbnails/6dbd5f78-66ce-4602-9531-3e78dc95f18d.jpg"
-                            alt="Gore Video">
-                        <h1 class="vid-title">Self Harm compilation</h1>
-                        <p>By Bestgore.fun: </p><span
-                            id="origin-user">@theync</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openvid" id="vid_2"
-                        onclick="window.open('https://bestgore.fun/w/k1emLdEU2HVhCHG1HD6daH', '_blank')">
-                        <img class="vid-up"
-                            src="https://bestgore.fun/lazy-static/thumbnails/cb050e83-b375-4d3e-970a-287af82c49cf.jpg"
-                            alt="Gore Video">
-                        <h1 class="vid-title">Self-harm, Cutter</h1>
-                        <p>By Bestgore.fun: </p><span
-                            id="origin-user">@theync</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openvid" id="vid_3"
-                        onclick="window.open('https://bestgore.fun/w/7m6iHxkeRH5fDdttEByaLN', '_blank')">
-                        <img class="vid-up"
-                            src="https://bestgore.fun/lazy-static/thumbnails/96063e18-cdf5-4555-8a78-9f0a05db6a74.jpg"
-                            alt="Gore Video">
-                        <h1 class="vid-title">self harm | 6</h1>
-                        <p>By Bestgore.fun: </p><span
-                            id="origin-user">@aoleet</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openvid" id="vid_4"
-                        onclick="window.open('https://bestgore.fun/w/k3sHz6qhG59S1ktkFUbXZy', '_blank')">
-                        <img class="vid-up"
-                            src="https://bestgore.fun/lazy-static/thumbnails/0616388d-069d-421b-ac2d-01494368a042.jpg"
-                            alt="Gore Video">
-                        <h1 class="vid-title">Amazing self harm I’m
-                            impressed</h1>
-                        <p>By Bestgore.fun: </p><span
-                            id="origin-user">@yeliac_on_xbox16</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openvid" id="vid_5"
-                        onclick="window.open('https://x.com/suihuayu/status/1872763840775262664', '_blank')">
-                        <img class="vid-up"
-                            src="https://pbs.twimg.com/ext_tw_video_thumb/1872762487311089669/pu/img/G5IyFiD3jiFnheHp.jpg"
-                            alt="Gore Video">
-                        <h1 class="vid-title">Twitter Self-harm</h1>
-                        <p>By Twitter: </p><span
-                            id="origin-user">@suihuayu</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openvid" id="vid_6"
-                        onclick="window.open('https://x.com/suihuayu/status/1872789192604041256', '_blank')">
-                        <img class="vid-up"
-                            src="https://pbs.twimg.com/ext_tw_video_thumb/1872788538783391744/pu/img/8D05a4oy5EzzcK3N.jpg"
-                            alt="Gore Video">
-                        <h1 class="vid-title">Twitter Self-harm</h1>
-                        <p>By Twitter: </p><span
-                            id="origin-user">@suihuayu</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-                <li>
-                    <button class="bt-openvid" id="vid_7"
-                        onclick="window.open('https://bestgore.fun/w/qsrEKiJBpsp1is9Nrb8f61', '_blank')">
-                        <img class="vid-up"
-                            src="https://bestgore.fun/lazy-static/thumbnails/87d5d426-8c52-4e04-87fe-20688ae4fe30.jpg"
-                            alt="Gore Video">
-                        <h1 class="vid-title">**** ***** Shot With Revolver</h1>
-                        <p>By Bestgore.fun: </p><span
-                            id="origin-user">@****</span>
-                        <h6>Uploaded by: C4tLiar (web Owner)</h6>
-                    </button>
-                </li>
-            </div>
+            <div class="g-videos"  id="vid-data"></div>
+
+            <script>
+                const vid_data = [
+                    {
+                        vidLink: "https://bestgore.fun/w/cnEjuWiWVNiWkifS8ejkhf",
+                        vidImgLink: "https://bestgore.fun/lazy-static/thumbnails/5ea640ef-1423-4eda-aee4-17f2d8e4ef6c.jpg",
+                        originWeb: "Bestgore.fun",
+                        category: "Gore Video",
+                        vidTitle: "rapist has his chest opened and his heart eaten by one of his executioners",
+                        userName: "lacrimojenta",
+                        uploadBy: "C4tLiar (web Owner)"
+                    },
+                    {
+                        vidLink: "https://bestgore.fun/w/ji9zi39jZG2za5tC8fcQA5",
+                        vidImgLink: "https://bestgore.fun/lazy-static/thumbnails/6dbd5f78-66ce-4602-9531-3e78dc95f18d.jpg",
+                        originWeb: "Bestgore.fun",
+                        category: "Self-Harm Video",
+                        vidTitle: "Self-Harm compilation",
+                        userName: "theync",
+                        uploadBy: "C4tLiar (web Owner)"
+                    },
+                    {
+                        vidLink: "https://bestgore.fun/w/k1emLdEU2HVhCHG1HD6daH",
+                        vidImgLink: "https://bestgore.fun/lazy-static/thumbnails/cb050e83-b375-4d3e-970a-287af82c49cf.jpg",
+                        originWeb: "Bestgore.fun",
+                        category: "Self-Harm Video",
+                        vidTitle: "Self-harm, Cutter",
+                        userName: "theync",
+                        uploadBy: "C4tLiar (web Owner)"
+                    },
+                    {
+                        vidLink: "https://bestgore.fun/w/7m6iHxkeRH5fDdttEByaLN",
+                        vidImgLink: "https://bestgore.fun/lazy-static/thumbnails/96063e18-cdf5-4555-8a78-9f0a05db6a74.jpg",
+                        originWeb: "Bestgore.fun",
+                        category: "Self-Harm Video",
+                        vidTitle: "self harm | 6",
+                        userName: "aoleet",
+                        uploadBy: "C4tLiar (web Owner)"
+                    },
+                    {
+                        vidLink: "https://bestgore.fun/w/k3sHz6qhG59S1ktkFUbXZy",
+                        vidImgLink: "https://bestgore.fun/lazy-static/thumbnails/0616388d-069d-421b-ac2d-01494368a042.jpg",
+                        originWeb: "Bestgore.fun",
+                        category: "Self-Harm Video",
+                        vidTitle: "Amazing self harm I’m impressed",
+                        userName: "yeliac_on_xbox16",
+                        uploadBy: "C4tLiar (web Owner)"
+                    },
+                    {
+                        vidLink: "https://x.com/suihuayu/status/1872763840775262664",
+                        vidImgLink: "https://pbs.twimg.com/ext_tw_video_thumb/1872762487311089669/pu/img/G5IyFiD3jiFnheHp.jpg",
+                        originWeb: "Twitter",
+                        category: "Self-Harm Video",
+                        vidTitle: "Twitter Self-harm",
+                        userName: "suihuayu",
+                        uploadBy: "C4tLiar (web Owner)"
+                    },
+                    {
+                        vidLink: "https://x.com/suihuayu/status/1872789192604041256",
+                        vidImgLink: "https://pbs.twimg.com/ext_tw_video_thumb/1872788538783391744/pu/img/8D05a4oy5EzzcK3N.jpg",
+                        originWeb: "Twitter",
+                        category: "Self-Harm Video",
+                        vidTitle: "Twitter Self-harm",
+                        userName: "suihuayu",
+                        uploadBy: "C4tLiar (web Owner)"
+                    },
+                    {
+                        vidLink: "https://bestgore.fun/w/qsrEKiJBpsp1is9Nrb8f61",
+                        vidImgLink: "https://bestgore.fun/lazy-static/thumbnails/87d5d426-8c52-4e04-87fe-20688ae4fe30.jpg",
+                        originWeb: "Bestgore.fun",
+                        category: "Gore Video",
+                        vidTitle: "**** ***** Shot With Revolver",
+                        userName: "****",
+                        uploadBy: "C4tLiar (web Owner)"
+                    },
+                    {
+                        vidLink: "https://x.com/lin40090218/status/1874783865413452091",
+                        vidImgLink: "https://pbs.twimg.com/ext_tw_video_thumb/1874783848753721344/pu/img/IuIR3Tnq3rT0heFD.jpg",
+                        originWeb: "Twitter",
+                        category: "Self-Harm Video",
+                        vidTitle: "Twitter Video",
+                        userName: "lin40090218",
+                        uploadBy: "C4tLiar (web Owner)"
+                    },
+                    {
+                        vidLink: "https://x.com/m7kr4/status/1874111257806332282",
+                        vidImgLink: "https://pbs.twimg.com/ext_tw_video_thumb/1874111237644312578/pu/img/UwUdb4dUgt8WIrv1.jpg",
+                        originWeb: "Twitter",
+                        category: "Self-Harm Video",
+                        vidTitle: "Twitter Video",
+                        userName: "m7kr4",
+                        uploadBy: "C4tLiar (web Owner)"
+                    },
+                ];
+    
+                function vid_createTemplate(item, index) {
+                    return `
+                        <li>
+                            <button class="bt-openvid" id="vid_${index}"
+                                onclick="window.open('${item.vidLink}', '_blank')">
+                                <img class="vid-up"
+                                    src="${item.vidImgLink}"
+                                    alt="${item.category}">
+                                <h1 class="vid-title">${item.vidTitle}</h1>
+                                <p>By ${item.originWeb}: </p><span
+                                    id="origin-user">@${item.userName}</span>
+                                <h6>Uploaded by: ${item.uploadBy}</h6>
+                            </button>
+                        </li>
+                    `;
+                }
+    
+                const vid_container = document.getElementById("vid-data");
+                vid_data.forEach((item, index) => {
+                    vid_container.innerHTML += vid_createTemplate(item, index + 1);
+                });
+            </script>
         </div>
 
         <div class="panels" id="FAQ">

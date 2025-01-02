@@ -271,13 +271,13 @@ main{
     transition: all 0.3s ease 0s;
 }
 
-.newYear{
+.announcements{
     display: inline;
     text-align: center;
     animation: Shake 1s 0s infinite both;
 }
 
-.newYear p{
+.announcements p{
     display: inline;
     font-size: xx-large;
     margin-right: 15px;
@@ -423,8 +423,8 @@ main{
 }
 
 .bt-openimg{
-    width: 270px;
-    height: 270px;
+    width: 274px;
+    height: fit-content;
     border-style: solid;
     border-width: 2px;
     border-color: white;
@@ -440,8 +440,6 @@ main{
 }
 
 .bt-openimg:hover{
-    width: 280px;
-    height: 280px;
     animation: Shake 1s 0s infinite both;
     transition: all 0.3s ease 0s;
 }
@@ -458,8 +456,8 @@ main{
 }
 
 .img-up{
-    width: 100%;
-    height: 100%;
+    width: 270px;
+    height: 270px;
     object-fit: cover;
 }
 
@@ -473,8 +471,8 @@ main{
 }
 
 .bt-openvid{
-    width: 270px;
-    height: 270px;
+    width: 405px;
+    height: fit-content;
     border-style: solid;
     border-width: 2px;
     border-color: white;
@@ -491,8 +489,6 @@ main{
 }
 
 .bt-openvid:hover{
-    width: 280px;
-    height: 280px;
     animation: Shake 1s 0s infinite both;
     transition: all 0.3s ease 0s;
 }
@@ -517,8 +513,8 @@ main{
 }
 
 .vid-up{
-    width: 100%;
-    height: 100%;
+    width: 400px;
+    height: 270px;
     object-fit: cover;
 }
 
